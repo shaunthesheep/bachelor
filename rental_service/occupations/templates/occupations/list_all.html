@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block scripts %}
+  <script type="text/javascript">
+    $(document).ready(function () {
+      RentalService.occupationListInit();
+    });
+  </script>
+{% endblock %}
+
+{% block content %}
+    <h3>Employment history</h3>
+    <hr/>
+  {% if occups %}
+    <table id="occupation-table" class="table table-striped">
+      <thead>
+        <tr>
+          <th>{% trans "Employee" %}</th>
+          <th>{% trans "Position" %}</th>
+          <th>{% trans "Since" %}</th>
+          <th>{% trans "Until" %}</th>
+          <th>{% trans "Duration" %}</th>
+        </tr>
+
+      </thead>
+      <tbody>
+        {% for o in occups %}
+          <tr>
+            <td>{{ o.user.username }}</td>
+            <td>{{ o.position.name }}</td>
+            <td>{{ o.vs }}</td>
+            <td>{% if o.is_current %}
+            <a class="end_occupation" href="#" data-end-occupation="{% url "end_occupation" id=o.id %}"><span class="glyphicon glyphicon-remove"></span></a>
+            {% trans "now. " %}{% else %}
+             <a class="renew_occupation" href="#" data-renew-occupation="{% url "renew_occupation" id=o.id %}"><span class="glyphicon glyphicon-repeat"></span></a>
+            {{ o.ve }}{% endif %}</td>
+            <td>{{ o.duration }}{% trans " days" %}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p>{% trans "Nobody is hired." %}
+        {% if user.is_staff %}<a href="{% url "add_occupation" %}">{% trans "Add some employees." %}</a>{% endif %}
+    </p>
+  {% endif %}
+
+ {% include "modals/delete_modal.html" %}
+{% endblock %}

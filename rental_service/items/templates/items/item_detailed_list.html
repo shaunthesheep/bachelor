@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+  {% if items %}
+    <h3>{% trans "Items rental hisotry" %}</h3><hr/>
+    <table id="item-detailed-table" class="table table-striped">
+      <thead>
+        <tr>
+          <th>{% trans "Name" %}</th>
+          <th>{% trans "Model" %}</th>
+          <th>{% trans "Period" %}</th>
+          <th>{% trans "Penalty" %}</th>
+          <th>{% trans "Available" %}</th>
+          <th>{% trans "Rented" %}</th>
+          <th>{% trans "Returned" %}</th>
+          <th>{% trans "Due" %}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in items %}
+          <tr>
+            <td>{{ item.name }}</td>
+            <td>{{ item.model }}</td>
+            <td>{{ item.period }}</td>
+            <td>{{ item.penalty }}</td>
+            <td>{{ item.available }}</td>
+            <td>{{ item.rented }}</td>
+            <td>{{ item.returned }}</td>
+            <td>{{ item.due }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p>{% trans "No items now." %} <a href="{% url "add_item" %}">{% trans "Add some here." %}</a></p>
+  {% endif %}
+
+{% endblock %}

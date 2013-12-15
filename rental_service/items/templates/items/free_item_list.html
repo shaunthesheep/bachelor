@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block scripts %}
+  <script type="text/javascript">
+    $(document).ready(function () {
+      RentalService.freeItemListInit();
+    });
+  </script>
+{% endblock %}
+
+{% block content %}
+  {% if counter > 0 %}
+    <h3>{% trans "Available items" %}</h3><hr/>
+    <table id="item-table" class="table table-striped">
+      <thead>
+        <tr>
+          <td>{% trans "Name" %}</td>
+          <td>{% trans "Model" %}</td>
+          <td>{% trans "Period" %}</td>
+          <td>{% trans "Penalty" %}</td>
+            {% if user.is_authenticated %}
+          <td>{% trans "Order" %}</td>
+            {% endif %}
+        </tr>
+
+      </thead>
+      <tbody>
+        {% for item in free_items %}
+          <tr>
+            <td>{{ item.name }}</td>
+            <td>{{ item.model }}</td>
+            <td>{{ item.period }}</td>
+            <td>{{ item.penalty }}</td>
+              {% if user.is_authenticated %}
+            <td><a class="request_item" href="#" data-request-item="{% url "request_item" id=item.id %}"><span class="glyphicon glyphicon-import"></span></a></td>
+              {% endif %}
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p>{% trans "No items available." %}
+        {% if user.is_staff %}<a href="{% url "add_item" %}">{% trans "Add some here." %}</a>{% endif %}
+    </p>
+  {% endif %}
+
+{% include "modals/delete_modal.html" %}
+{% endblock %}

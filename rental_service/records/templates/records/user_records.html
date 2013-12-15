@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <ul>
+    {% for record in records %}
+      <li>{{ record.name }}{{ record.model }}{{ record.period }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

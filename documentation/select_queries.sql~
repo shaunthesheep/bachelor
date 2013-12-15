@@ -1,0 +1,35 @@
+SELECT r.id, i.id AS item_id, i.model AS model, i.period AS period, i.penalty AS penalty,
+                     i.availability AS available, i.name AS name, CASE WHEN array_length(r.tt, 1) = 1 
+               THEN to_char(CURRENT_DATE, 'MM/DD/YYYY')
+                ELSE rent_day(r.tt, r.vt) END AS rented, 
+               CASE WHEN r.tt[array_length(r.tt, 1):array_length(r.tt, 1)] = ARRAY['0001-01-01']::date[] 
+               THEN '' ELSE to_char(unnest(r.tt[array_length(r.tt, 1):array_length(r.tt, 1)]), 'MM/DD/YYYY')
+                END AS returned, to_char(unnest(r.vt[array_length(r.vt, 1):array_length(r.vt, 1)]), 'MM/DD/YYYY')
+                AS due FROM records_record r JOIN items_item i ON i.id = r.item_id 
+
+
+SELECT r.id, i.id AS item_id, i.model AS model, i.period AS period, i.penalty AS penalty, i.availability AS available, i.name AS name,
+	CASE WHEN array_length(r.tt, 1) = 1 THEN to_char(CURRENT_DATE, 'MM/DD/YYYY')
+                ELSE rent_day(r.tt, r.vt) END AS rented
+FROM items_item i LEFT OUTER JOIN records_record r  ON i.id = r.item_id 
+
+	CASE WHEN r.tt[array_length(r.tt, 1):array_length(r.tt, 1)] = ARRAY['0001-01-01']::date[] 
+               THEN '' ELSE to_char(unnest(r.tt[array_length(r.tt, 1):array_length(r.tt, 1)]), 'MM/DD/YYYY')
+                END AS returned
+
+
+                    FROM items_item i LEFT OUTER JOIN records_record r  ON i.id = r.item_id 
+
+
+
+SELECT r.id, i.id AS item_id, i.model AS model, i.period AS period, i.penalty AS penalty,
+                     i.availability AS available, i.name AS name, CASE WHEN array_length(r.tt, 1) = 1 
+               THEN to_char(CURRENT_DATE, 'MM/DD/YYYY')
+                ELSE rent_day(r.tt, r.vt) END AS rented, 
+               CASE WHEN r.tt[array_length(r.tt, 1):array_length(r.tt, 1)] = ARRAY['0001-01-01']::date[] 
+               THEN '' ELSE to_char(unnest(r.tt[array_length(r.tt, 1):array_length(r.tt, 1)]), 'MM/DD/YYYY')
+                END AS returned FROM items_item i LEFT OUTER JOIN records_record r ON i.id = r.item_id 
+
+
+, to_char(unnest(r.vt[array_length(r.vt, 1):array_length(r.vt, 1)]), 'MM/DD/YYYY')
+                AS due 

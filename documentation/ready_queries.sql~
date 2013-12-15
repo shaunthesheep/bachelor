@@ -1,0 +1,93 @@
+--most recent valid time value:
+select vt[array_length(vt, 1):array_length(vt, 1)] from records_record;
+
+--select rent date and return date YEAH!!!!!!!!!!!!!!!!!!
+SELECT id, 
+CASE WHEN array_length(tt, 1) = 1 
+THEN to_char(CURRENT_DATE, 'MM/DD/YYYY')
+ELSE rent_day(tt, vt) 
+END AS rented,
+CASE WHEN tt[array_length(tt, 1):array_length(tt, 1)] = ARRAY['0001-01-01']::date[]
+THEN ''
+ELSE to_char(unnest(tt[array_length(tt, 1):array_length(tt, 1)]), 'MM/DD/YYYY') END AS returned,
+to_char(unnest(vt[array_length(vt, 1):array_length(vt, 1)]), 'MM/DD/YYYY') AS due
+FROM records_record;
+
+
+-- FUNCTIONS
+
+--returns transaction time of rent start YEAH@!!!!!!!!!!!!!!!!!!
+CREATE OR REPLACE FUNCTION rent_day(date[], date[])
+RETURNS varchar
+AS
+$$
+DECLARE
+	trans ALIAS FOR $1;
+	valid ALIAS FOR $2;
+	idx int;
+BEGIN
+	IF trans IS NULL THEN
+		RETURN '';
+	END IF;
+	idx = array_length(valid, 1);
+	LOOP
+	IF idx = 0 THEN
+		EXIT;
+	END IF;
+	idx = idx -1;
+	IF valid[array_length(idx, 1):array_length(idx, 1)] <> valid[array_length(valid, 1):array_length(valid, 1)] THEN
+		EXIT;
+	END IF;
+	END LOOP;
+	idx = idx + 1;	
+RETURN to_char(unnest(trans[idx:idx]), 'MM/DD/YYYY');
+END;
+$$
+LANGUAGE plpgsql 
+
+--returns last value of array or null if record doeas not exist YEAH@!!!!!!!!!!!!!!!!!!
+CREATE OR REPLACE FUNCTION get_day_or_null(date[])
+RETURNS varchar
+AS
+$$
+DECLARE
+	the_array ALIAS FOR $1;
+BEGIN
+	IF the_array IS NULL THEN
+		RETURN '';
+	END IF;
+RETURN to_char(unnest(the_array[array_length(the_array, 1):array_length(the_array, 1)]), 'MM/DD/YYYY');
+END;
+$$
+LANGUAGE plpgsql 
+
+-- select detailed info about items YEAH@!!!!!!!!!!!!!!!!!!
+CREATE OR REPLACE FUNCTION item_details()
+  RETURNS TABLE (
+   id   	int
+  ,name		varchar(128)
+  ,model   	varchar(128)
+  ,period 	int
+  ,penalty	numeric(8,2)
+  ,available	boolean
+  ,rented	varchar(10)
+  ,returned	varchar(10)
+  ,due		varchar(10)
+  ) AS
+$func$
+BEGIN
+
+   RETURN QUERY
+SELECT i.id AS id, i.name AS name, i.model AS model, i.period AS period, i.penalty AS penalty, i.availability AS available, 
+	CASE WHEN array_length(r.tt, 1) = 1 THEN to_char(CURRENT_DATE, 'MM/DD/YYYY') ELSE rent_day(r.tt, r.vt) END AS rented,
+	CASE WHEN r.tt[array_length(r.tt, 1):array_length(r.tt, 1)] = ARRAY['0001-01-01']::date[] 
+	       THEN '' ELSE get_day_or_null(r.tt)
+	        END AS returned,
+	get_day_or_null(r.vt) AS due
+FROM items_item i LEFT OUTER JOIN records_record r  ON i.id = r.item_id;
+
+END
+$func$  LANGUAGE plpgsql;
+
+
+

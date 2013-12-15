@@ -1,0 +1,11 @@
+Postgres 9.3
+
+Python 2.7
+
+
+virtualenv: pip install virtualenv
+virtualenv nazwa
+source nazwa/bin/activate
+//go to project path
+pip install -r requirements.txt
+deactivate

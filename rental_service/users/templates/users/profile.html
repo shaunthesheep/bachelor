@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{#{% load staticfiles i18n %}#}
+{% load i18n %}
+
+{% block scripts %}
+  <script type="text/javascript">
+    $(document).ready(function () {
+      RentalService.userListInit();
+    });
+  </script>
+{% endblock %}
+
+{% block content %}
+    <h3>Your profile</h3>
+    </hr>
+    <p class="text-info">{{ user }}</p>
+    <p>{{ user.email }} </p>
+    <p>{{ user.first_name }} {{ user.last_name }}</p>
+    <hr/>
+    {% if position %}{% trans "Your current position: " %}{{ position.name }}
+    {% else %}{% trans "You're currently not employed. " %}
+    <a href="{% url "free_positions" %}">{% trans "Check out free positions." %}</a>{% endif %}
+    <hr/>
+
+    {% if count > 0 %}
+        <table class="table table-striped" id="user-records-table">
+            <tr>
+                    <td>Name</td>
+                    <td>Model</td>
+                    <td>Rent date</td>
+                    <td>Return date</td>
+                    <td>Due date</td>
+            </tr>
+        {% for r in timed_records %}
+            <tr>
+                    <td>{{ r.name }}</td>
+                    <td>{{ r.model }}</td>
+                    <td>{{ r.rented }}</td>
+                    <td>{% if r.returned != '' %}{{ r.returned}}{% else %}
+                        <a class="return_item" href="#" data-return-item="{% url "return_item" id=r.id %}">
+                            <span class="glyphicon glyphicon-arrow-up"></span></a>
+                    {% endif %}</td>
+                    <td>{{ r.due }}</td>
+            </tr>
+        {% endfor %}
+        </table>
+    {% else %}
+        <p>{% trans "You have no items" %} <a href="{% url "add_record" %}">{% trans "Add information on rents here." %}</a></p>
+    {% endif %}
+
+{% include "modals/delete_modal.html" %}
+{% endblock %}

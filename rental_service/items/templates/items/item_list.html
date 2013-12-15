@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block scripts %}
+  <script type="text/javascript">
+    $(document).ready(function () {
+      RentalService.itemListInit();
+    });
+  </script>
+{% endblock %}
+
+{% block content %}
+  {% if items %}
+    <h3>{% trans "Company items" %}</h3><hr/>
+    <table id="item-table" class="table table-striped">
+      <thead>
+        <tr>
+          <td>{% trans "Name" %}</td>
+          <td>{% trans "Model" %}</td>
+          <td>{% trans "Period" %}</td>
+          <td>{% trans "Penalty" %}</td>
+            {% if user.is_staff %}
+          <td>{% trans "Remove" %}</td>
+            {% endif %}
+        </tr>
+
+      </thead>
+      <tbody>
+        {% for item in items %}
+          <tr>
+            <td>{{ item.name }}</td>
+            <td>{{ item.model }}</td>
+            <td>{{ item.period }}</td>
+            <td>{{ item.penalty }}</td>
+            <td>{% if item.availability %}
+                <a class="remove_item" href="#" data-remove-item="{% url "remove_item" id=item.id %}"><span class="glyphicon glyphicon-remove"></span></a>
+
+            {% else %}
+                {% trans "Removed" %}
+                {% endif %}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p>{% trans "No items available." %}
+        {% if user.is_staff %}<a href="{% url "add_item" %}">{% trans "Add some here." %}</a>{% endif %}
+    </p>
+  {% endif %}
+
+{% include "modals/delete_modal.html" %}
+{% endblock %}

@@ -1,0 +1,6 @@
+select last transaction time value:
+select id,  history[array_length(history, 1):array_length(history, 1)][1] from records_record;
+
+select last valid time value:
+select id,  history[array_length(history, 1):array_length(history, 1)][2] from records_record;
+

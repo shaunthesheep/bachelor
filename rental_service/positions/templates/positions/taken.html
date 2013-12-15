@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block scripts %}
+  <script type="text/javascript">
+    $(document).ready(function () {
+      RentalService.takenPositionListInit();
+    });
+  </script>
+{% endblock %}
+
+{% block content %}
+    <h3>Staffed positions</h3>
+    <hr/>
+  {% if positions %}
+    <table id="taken-position-table" class="table table-striped">
+      <thead>
+        <tr>
+          <th>{% trans "Name" %}</th>
+          <th>{% trans "Responsibilities" %}</th>
+        {% if user.is_authenticated %}
+          <th>{% trans "Employee" %}</th>
+            {% if user.is_staff %}
+          <th>{% trans "Dismiss" %}</th>
+            {% endif %}
+        {% endif %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for p in positions %}
+          <tr>
+            <td>{{ p.name }}</td>
+            <td>{{ p.responsibilities }}</td>
+          {% if user.is_authenticated %}
+              <td>{{ p.get_current_occupation.user.username }}</td>
+            {% if user.is_staff %}
+            <td><a class="end_occupation" href="#" data-end-occupation="{% url "end_occupation" id=p.get_current_occupation.id %}"><span class="glyphicon glyphicon-remove"></span></a></td>
+            {% endif %}
+          {% endif %}
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p>{% trans "No positions to list." %}
+        {% if user.is_staf %}<a href="{% url "add_position" %}">{% trans "Add some here." %}</a>{% endif %}
+    </p>
+  {% endif %}
+
+{% include "modals/delete_modal.html" %}
+{% endblock %}

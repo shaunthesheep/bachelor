@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block scripts %}
+  <script type="text/javascript">
+    $(document).ready(function () {
+      RentalService.positionListInit();
+    });
+  </script>
+{% endblock %}
+
+{% block content %}
+    <h3>Available positions</h3>
+    <hr/>
+  {% if positions %}
+    <table id="position-table" class="table table-striped">
+      <thead>
+        <tr>
+          <th>{% trans "Name" %}</th>
+          <th>{% trans "Responsibilities" %}</th>
+        {% if user.is_staff %}
+          <th>{% trans "Deactivate" %}</th>
+          <th>{% trans "Add employee" %}</th>
+        {% endif %}
+        </tr>
+
+      </thead>
+      <tbody>
+        {% for p in positions %}
+          <tr>
+            <td>{{ p.name }}</td>
+            <td>{{ p.responsibilities }}</td>
+          {% if user.is_staff %}
+            <td>{% if p.active %}
+            <a class="delete_position" href="#" data-delete-position="{% url "delete_position" id=p.id %}"><span class="glyphicon glyphicon-remove"></span></a>
+            {% else %}{% trans "Not active" %}{% endif %}</td>
+            <td><a class="employ" href="#" data-employ="{% url "employ" id=p.id %}"><span class="glyphicon glyphicon-user"></span></a></td>
+          {% endif %}
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p>{% trans "No positions to list." %}
+        {% if user.is_staf %}<a href="{% url "add_position" %}">{% trans "Add some here." %}</a>{% endif %}
+    </p>
+  {% endif %}
+
+{% include "modals/delete_modal.html" %}
+{% include "modals/employ_modal.html" %}
+{% endblock %}

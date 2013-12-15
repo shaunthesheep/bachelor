@@ -1,0 +1,99 @@
+--select last transaction time value:
+select id,  history[array_length(history, 1):array_length(history, 1)][1:1] from records_record;
+
+--select last valid time value:
+select id,  history[array_length(history, 1):array_length(history, 1)][2:2] from records_record;
+
+--select all transaction time values:
+select id,  history[1:array_length(history, 1)][1] from records_record;
+
+--only valid times
+SELECT history[1:array_length(history, 1)][2:2] from records_record;
+
+--most recent valid time value:
+select vt[array_length(vt, 1):array_length(vt, 1)] from records_record;
+
+select id,  history[0:array_length(history, 1)][1] from (SELECT max(history[0:array_length(history, 1)][2]) from records_record AS last_rent);
+
+select min(unnest), max(unnest) from (select unnest(history[1:2][2:2]) from records_record) as hist2;
+
+CREATE OR REPLACE FUNCTION unnest(ANYARRAY) RETURNS SETOF ANYELEMENT
+LANGUAGE SQL AS $$SELECT $1[i] FROM
+generate_series(array_lower($1,1),array_upper($1,1)) i;$$;
+
+SELECT array_agg_mult(ARRAY[ARRAY[name, id::text, url]]) AS tbl_mult_arr
+FROM   tbl;
+
+CREATE OR REPLACE AGGREGATE array_agg_mult (anyarray)  (
+    SFUNC     = array_cat
+   ,STYPE     = anyarray
+   ,INITCOND  = '{}'
+);
+
+
+CREATE FUNCTION array_search(needle ANYELEMENT, haystack ANYARRAY)
+RETURNS INT AS $$
+    SELECT i
+      FROM generate_subscripts($2, 1) AS i
+     WHERE $2[i] = $1
+  ORDER BY i
+$$ LANGUAGE sql STABLE;
+
+--returns transaction time of rent start YEAH@!!!!!!!!!!!!!!!!!!
+CREATE OR REPLACE FUNCTION rent_day(date[], date[])
+RETURNS varchar
+AS
+$$
+DECLARE
+	trans ALIAS FOR $1;
+	valid ALIAS FOR $2;
+	idx int;
+BEGIN
+	idx = array_length(valid, 1);
+	LOOP
+	IF idx = 0 THEN
+		EXIT;
+	END IF;
+	idx = idx -1;
+	IF valid[array_length(idx, 1):array_length(idx, 1)] <> valid[array_length(valid, 1):array_length(valid, 1)] THEN
+		EXIT;
+	END IF;
+	END LOOP;
+	idx = idx + 1;	
+RETURN to_char(unnest(trans[idx:idx]), 'MM/DD/YYYY');
+END;
+$$
+LANGUAGE plpgsql 
+
+
+
+--select rent date and return date YEAH!!!!!!!!!!!!!!!!!!
+SELECT id, 
+CASE WHEN array_length(tt, 1) = 1 
+THEN to_char(CURRENT_DATE, 'MM/DD/YYYY')
+ELSE rent_day(tt, vt) 
+END AS rented,
+CASE WHEN tt[array_length(tt, 1):array_length(tt, 1)] = ARRAY['0001-01-01']::date[]
+THEN ''
+ELSE to_char(unnest(tt[array_length(tt, 1):array_length(tt, 1)]), 'MM/DD/YYYY') END AS returned,
+to_char(unnest(vt[array_length(vt, 1):array_length(vt, 1)]), 'MM/DD/YYYY') AS due
+FROM records_record;
+
+
+
+--select transaction time and valid time--
+SELECT id, 
+CASE WHEN tt[array_length(tt, 1):array_length(tt, 1)] = ARRAY['0001-01-01']::date[]
+AND array_length(tt, 1) <> 1
+THEN to_char(unnest(tt[array_length(tt, 1)-1:array_length(tt, 1)-1]), 'MM/DD/YYYY')
+WHEN array_length(tt, 1) = 1
+THEN to_char(CURRENT_DATE, 'MM/DD/YYYY')
+ELSE
+to_char(unnest(tt[array_length(tt, 1):array_length(tt, 1)]), 'MM/DD/YYYY')
+END AS t,
+to_char(unnest(vt[array_length(vt, 1):array_length(vt, 1)]), 'MM/DD/YYYY') AS v 
+FROM records_record;
+
+
+
+

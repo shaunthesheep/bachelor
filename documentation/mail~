@@ -1,0 +1,9 @@
+Szanowny Panie Doktorze,
+
+Niestety nie mogłam pojawić się dzisiaj na konsultacjach. 
+W załączniku przesyłam raport w wersji aktualnej. Wydaje mi się, że część dotycząca wstępu oraz projektu systemu jest kompletna i proszę o jej sprawdzenie. Wciąż pracuję nad częścią dotyczącą implementacji i samą implementacją projektu. W czwartek pokażę Panu efekty pracy.
+Oprócz wcześniej ustalonej funkcjonalności dotyczącej wypożyczeń, dodałam funkcję przypisywania pracownikom stanowisk w firmie, co pozwoliło mi na zastosowanie innej struktury danych i indeksu GiST na typie range(vs, ve), gdzie vs i ve są wartościami valid time - początkową i końcową.
+Chciałabym spytać, czy wyraziłby Pan zgodę o przedłużenie terminu oddania o np. tydzień. Pośpiech w realizacji projektu nie wpłynie pozytywnie na wyniki, stąd prośba. Jeśli tak, również w czwartek mogłabym udać się do Prodziekana z takim podaniem.
+
+Z wyrazami szacunku,
+Anna Bomersbach
