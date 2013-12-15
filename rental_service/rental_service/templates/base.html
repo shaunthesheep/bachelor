@@ -53,6 +53,7 @@
                 {% if user.is_staff %}
               <li><a href="{% url "occupations" %}">{% trans "History" %}</a></li>
               <li><a href="{% url "add_position" %}">{% trans "Add" %}</a></li>
+              <li><a href="{% url "add_occupation" %}">{% trans "Employ user" %}</a></li>
                 {% endif %}
             </ul>
           </li>

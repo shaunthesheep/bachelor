@@ -20,6 +20,7 @@
           <td>{% trans "Period" %}</td>
           <td>{% trans "Penalty" %}</td>
             {% if user.is_staff %}
+          <td>{% trans "Edit" %}</td>
           <td>{% trans "Remove" %}</td>
             {% endif %}
         </tr>
@@ -32,6 +33,9 @@
             <td>{{ item.model }}</td>
             <td>{{ item.period }}</td>
             <td>{{ item.penalty }}</td>
+            <td>
+                <a href="{% url "edit_item" id=item.id %}"><span class="glyphicon glyphicon-pencil"></span></a>
+            </td>
             <td>{% if item.availability %}
                 <a class="remove_item" href="#" data-remove-item="{% url "remove_item" id=item.id %}"><span class="glyphicon glyphicon-remove"></span></a>
 

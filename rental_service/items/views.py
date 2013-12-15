@@ -48,10 +48,24 @@ def item_detailed_list(request):
 @require_POST
 def request_item(request, id):
     obj, created = Record.objects.get_or_create(user=request.user, item=Item.objects.get(id=id))
-    #obj.save()
-    # period = Item.objects.get(id=id).period
-    # common.update_record(request.user.id, id, period)
+    obj.save()
+    period = Item.objects.get(id=id).period
+    common.update_record(request.user.id, id, period)
     return HttpResponse('OK')
+
+
+@staff_member_required
+@render_to('items/edit_item.html')
+def edit_item(request, id):
+    item = get_object_or_404(Item, pk=id)
+    item_form = AddItemForm(request.POST or None, request.FILES or None, instance=item)
+
+    if item_form.is_valid():
+        obj = item_form.save(commit=False)
+        obj.availability = True
+        obj.save()
+
+    return {'form': item_form}
 
 
 @require_POST

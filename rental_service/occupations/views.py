@@ -6,7 +6,7 @@ from django.shortcuts import get_object_or_404
 from django.views.decorators.http import require_POST
 from common import common
 from .models import Occupation
-from .forms import AddOccupationForm
+from .forms import AddOccupationForm, EmployForm
 from django.http import HttpResponse
 from positions.models import Position
 
@@ -48,16 +48,33 @@ def renew_occupation(request, id):
     return HttpResponse('OK')
 
 
+# @staff_member_required
+# @require_POST
+# def employ(request, id):
+#     job = get_object_or_404(Position, id=id)
+#     form = AddOccupationForm(request.POST or None)
+#     if form.is_valid():
+#         obj = form.save(commit=False)
+#         obj.position = job
+#         obj.user = get_object_or_404(User, id=request.user) ########
+#         obj.vs = date.today()
+#         obj.ve = common.future_now
+#         obj.save()
+#     return HttpResponse('OK')
+
+
 @staff_member_required
-@require_POST
+@render_to('occupations/employ.html')
 def employ(request, id):
-    job = get_object_or_404(Position, id=id)
-    form = AddOccupationForm(request.POST or None)
+    position = get_object_or_404(Position, pk=id)
+    form = EmployForm(request.POST or None)
+
     if form.is_valid():
         obj = form.save(commit=False)
-        obj.position = job
-        obj.user = get_object_or_404(User, id=request.user) ########
+        obj.position = position
         obj.vs = date.today()
         obj.ve = common.future_now
         obj.save()
-    return HttpResponse('OK')
+
+    return {'form': form,
+            'position': position}

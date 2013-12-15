@@ -1,0 +1,7 @@
+To load sample data to your database:
+
+psql dbname < infile
+
+For current settings:
+
+psql rent < test_data.sql
