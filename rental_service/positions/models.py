@@ -5,6 +5,7 @@ from .managers import PositionManager, FreeManager
 
 
 class Position(models.Model):
+    """Model of relation storing data on jobs in the company."""
     name = models.CharField(max_length=128)
     responsibilities = models.TextField(null=True, blank=True)
     active = models.BooleanField(default=True)

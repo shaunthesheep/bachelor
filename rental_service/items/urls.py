@@ -1,3 +1,7 @@
+"""Addresses' parts following /items/ in the url.
+
+    Urlpatterns contains addresses combined with proper function from a view and unique identifier.
+"""
 from django.conf.urls import patterns, url
 
 

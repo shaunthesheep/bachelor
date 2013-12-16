@@ -6,22 +6,29 @@ from common import common
 
 
 class Occupation(models.Model):
-        user = models.ForeignKey(User)
-        position = models.ForeignKey(Position)
-        vs = models.DateField(auto_now_add=True)
-        ve = models.DateField(default=common.future_now)
+    """Model of relation storing temporal data about users occupying positions in the company.
 
-        def __unicode__(self):
-            return self.user + " as " + self.position.name
+    Combines information on instances of User and Position classes with dates indicating start and end points
+    of valid time period.
+    Property: is_current used to denote whether the occupation is still valid.
+    Property: duration computes the number of days the occupation was valid.
+    """
+    user = models.ForeignKey(User)
+    position = models.ForeignKey(Position)
+    vs = models.DateField(auto_now_add=True)
+    ve = models.DateField(default=common.future_now)
 
-        @property
-        def is_current(self):
-            if self.ve > date.today():
-                return True
-            return False
+    def __unicode__(self):
+        return self.user + " as " + self.position.name
 
-        @property
-        def duration(self):
-            if self.is_current:
-                return (date.today()-self.vs).days
-            return (self.ve-self.vs).days
+    @property
+    def is_current(self):
+        if self.ve > date.today():
+            return True
+        return False
+
+    @property
+    def duration(self):
+        if self.is_current:
+            return (date.today()-self.vs).days
+        return (self.ve-self.vs).days

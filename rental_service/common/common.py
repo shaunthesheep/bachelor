@@ -1,3 +1,20 @@
+"""Provides constants and functions for managing data in database using SQL language.
+
+Logical_now is a constant used as 'Until Changed' chronon in Record relation.
+Future_now is a constant used as 'now' chronon in Occupation relation. It needs to be always bigger
+than current date in order for a proper index to be created.
+
+Strings: free_items, occupied_items, item_details, free_positions, taken_positions
+are defined for executing raw SQL commands to be more readable, as well as in order to keep all SQL code
+in one place.
+
+Functions: user_items(id_value), return_item(user_id, item_id) support retrieving filtered data from DB.
+
+Function: update_record(user, item, period) is to construct a proper SQL query for DB update when:
+- adding new rental record
+- refreshing database
+"""
+
 from datetime import datetime, timedelta
 from django.db import connection
 

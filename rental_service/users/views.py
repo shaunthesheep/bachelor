@@ -10,6 +10,7 @@ from common import common
 
 
 class UserRegister(CreateView):
+    """Creates an instance of a registration form, sets omitted value and saves and object if valid."""
     form_class = UserRegisterForm
     template_name = 'users/registration.html'
 
@@ -27,6 +28,11 @@ def edit_user(request, username):
 @login_required
 @render_to('users/profile.html')
 def user_profile(request, username):
+    """Retrieves data to be presented at a user profile page.
+    - user's instance data
+    - user's rental history
+    - user's current position
+    """
     user = get_object_or_404(User, username=username)
     timed_records = Item.objects.raw(common.user_items(user.id))
     counter = sum(1 for rec in timed_records)

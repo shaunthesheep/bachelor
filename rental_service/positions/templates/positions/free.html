@@ -34,7 +34,7 @@
             <td>{% if p.active %}
             <a class="delete_position" href="#" data-delete-position="{% url "delete_position" id=p.id %}"><span class="glyphicon glyphicon-remove"></span></a>
             {% else %}{% trans "Not active" %}{% endif %}</td>
-            <td><a class="employ" href="#" data-employ="{% url "employ" id=p.id %}"><span class="glyphicon glyphicon-user"></span></a></td>
+            <td><a href="{% url "employ" id=p.id %}"><span class="glyphicon glyphicon-user"></span></a></td>
           {% endif %}
           </tr>
         {% endfor %}
