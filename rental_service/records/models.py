@@ -4,6 +4,15 @@ from items.models import Item
 from django.db import models
 import dbarray
 
+__author__ = 'Anna Bomersbach'
+__credits__ = ['Anna Bomersbach', 'Tomasz Kubik']
+
+__license__ = "GPL"
+__version__ = "1.0.1"
+__maintainer__ = 'Anna Bomersbach'
+__email__ = "184779@student.pwr.wroc.pl"
+__status__ = 'Production'
+
 
 class Record(models.Model):
     """Model of relation storing temporal data on rental records.

@@ -2,29 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d96ae04-3988-4e3e-a24c-9faf27fd2f85" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/__init__.py" afterPath="$PROJECT_DIR$/common/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dbarray/__init__.py" afterPath="$PROJECT_DIR$/dbarray/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/__init__.py" afterPath="$PROJECT_DIR$/items/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/occupations/__init__.py" afterPath="$PROJECT_DIR$/occupations/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/positions/__init__.py" afterPath="$PROJECT_DIR$/positions/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/records/__init__.py" afterPath="$PROJECT_DIR$/records/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rental_service/__init__.py" afterPath="$PROJECT_DIR$/rental_service/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/users/__init__.py" afterPath="$PROJECT_DIR$/users/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/occupations/templates/occupations/add_new.html" afterPath="$PROJECT_DIR$/occupations/templates/occupations/add_new.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/positions/templates/positions/add_new.html" afterPath="$PROJECT_DIR$/positions/templates/positions/add_new.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/records/templates/records/add_new.html" afterPath="$PROJECT_DIR$/records/templates/records/add_new.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/templates/items/add_new_item.html" afterPath="$PROJECT_DIR$/items/templates/items/add_new_item.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rental_service/templates/base.html" afterPath="$PROJECT_DIR$/rental_service/templates/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/common.py" afterPath="$PROJECT_DIR$/common/common.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/templates/items/edit_item.html" afterPath="$PROJECT_DIR$/items/templates/items/edit_item.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/occupations/templates/occupations/employ.html" afterPath="$PROJECT_DIR$/occupations/templates/occupations/employ.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/forms.py" afterPath="$PROJECT_DIR$/items/forms.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/occupations/forms.py" afterPath="$PROJECT_DIR$/occupations/forms.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/positions/forms.py" afterPath="$PROJECT_DIR$/positions/forms.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/records/forms.py" afterPath="$PROJECT_DIR$/records/forms.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/users/forms.py" afterPath="$PROJECT_DIR$/users/forms.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/positions/templates/positions/free.html" afterPath="$PROJECT_DIR$/positions/templates/positions/free.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/templates/items/free_item_list.html" afterPath="$PROJECT_DIR$/items/templates/items/free_item_list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rental_service/templates/index.html" afterPath="$PROJECT_DIR$/rental_service/templates/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/templates/items/item_detailed_list.html" afterPath="$PROJECT_DIR$/items/templates/items/item_detailed_list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/templates/items/item_list.html" afterPath="$PROJECT_DIR$/items/templates/items/item_list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/occupations/templates/occupations/list_all.html" afterPath="$PROJECT_DIR$/occupations/templates/occupations/list_all.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/positions/templates/positions/list_all.html" afterPath="$PROJECT_DIR$/positions/templates/positions/list_all.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/users/templates/registration/login.html" afterPath="$PROJECT_DIR$/users/templates/registration/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rental_service/static/less/main.less" afterPath="$PROJECT_DIR$/rental_service/static/less/main.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/positions/managers.py" afterPath="$PROJECT_DIR$/positions/managers.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/models.py" afterPath="$PROJECT_DIR$/items/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/occupations/models.py" afterPath="$PROJECT_DIR$/occupations/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/positions/models.py" afterPath="$PROJECT_DIR$/positions/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/records/models.py" afterPath="$PROJECT_DIR$/records/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/users/templates/users/profile.html" afterPath="$PROJECT_DIR$/users/templates/users/profile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/users/templates/users/registration.html" afterPath="$PROJECT_DIR$/users/templates/users/registration.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rental_service/settings.py" afterPath="$PROJECT_DIR$/rental_service/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/positions/templates/positions/taken.html" afterPath="$PROJECT_DIR$/positions/templates/positions/taken.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/records/tests.py" afterPath="$PROJECT_DIR$/records/tests.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/urls.py" afterPath="$PROJECT_DIR$/items/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/occupations/urls.py" afterPath="$PROJECT_DIR$/occupations/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/positions/urls.py" afterPath="$PROJECT_DIR$/positions/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/records/urls.py" afterPath="$PROJECT_DIR$/records/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rental_service/urls.py" afterPath="$PROJECT_DIR$/rental_service/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/users/urls.py" afterPath="$PROJECT_DIR$/users/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/records/templates/records/user_records.html" afterPath="$PROJECT_DIR$/records/templates/records/user_records.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/views.py" afterPath="$PROJECT_DIR$/items/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/occupations/views.py" afterPath="$PROJECT_DIR$/occupations/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/positions/views.py" afterPath="$PROJECT_DIR$/positions/views.py" />
@@ -53,63 +69,50 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/items/views.py">
+      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rental_service/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="90" selection-start="491" selection-end="577" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="1746">
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/positions/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="51" selection-start="1418" selection-end="1418" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="1026">
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/records/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="25" selection-start="1134" selection-end="1134" vertical-scroll-proportion="0.0" vertical-offset="157" max-vertical-offset="684">
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3294">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rental_service/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="666">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/records/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="71" selection-start="415" selection-end="415" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="324">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="574">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rental_service/templates/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="61" selection-start="1680" selection-end="1681" vertical-scroll-proportion="-3.1111112" vertical-offset="498" max-vertical-offset="1494">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/users/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="12" selection-start="1048" selection-end="1048" vertical-scroll-proportion="1.1093439" vertical-offset="0" max-vertical-offset="990">
+            <state line="18" column="0" selection-start="596" selection-end="596" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1152">
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="forms.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/users/forms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="0" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -118,7 +121,25 @@
       <file leaf-file-name="registration.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/users/templates/users/registration.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="378">
+            <state line="11" column="0" selection-start="258" selection-end="258" vertical-scroll-proportion="-7.3333335" vertical-offset="0" max-vertical-offset="576">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/users/templates/registration/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="0" selection-start="258" selection-end="258" vertical-scroll-proportion="-7.3333335" vertical-offset="0" max-vertical-offset="558">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tests.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/records/tests.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="558">
               <folding />
             </state>
           </provider>
@@ -127,7 +148,7 @@
       <file leaf-file-name="profile.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/users/templates/users/profile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="39" selection-start="332" selection-end="332" vertical-scroll-proportion="-6.0" vertical-offset="108" max-vertical-offset="1026">
+            <state line="11" column="0" selection-start="258" selection-end="258" vertical-scroll-proportion="-7.3333335" vertical-offset="0" max-vertical-offset="1224">
               <folding />
             </state>
           </provider>
@@ -136,16 +157,7 @@
       <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/users/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="36" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="324">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="free.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/positions/templates/positions/free.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="103" selection-start="1087" selection-end="1174" vertical-scroll-proportion="-12.0" vertical-offset="324" max-vertical-offset="1008">
+            <state line="15" column="0" selection-start="495" selection-end="495" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="486">
               <folding />
             </state>
           </provider>
@@ -169,22 +181,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/occupations/models.py" />
-        <option value="$PROJECT_DIR$/items/models.py" />
-        <option value="$PROJECT_DIR$/positions/models.py" />
-        <option value="$PROJECT_DIR$/records/models.py" />
-        <option value="$PROJECT_DIR$/items/urls.py" />
-        <option value="$PROJECT_DIR$/occupations/urls.py" />
-        <option value="$PROJECT_DIR$/positions/urls.py" />
-        <option value="$PROJECT_DIR$/rental_service/urls.py" />
-        <option value="$PROJECT_DIR$/users/urls.py" />
-        <option value="$PROJECT_DIR$/items/views.py" />
-        <option value="$PROJECT_DIR$/occupations/views.py" />
-        <option value="$PROJECT_DIR$/positions/views.py" />
-        <option value="$PROJECT_DIR$/records/views.py" />
-        <option value="$PROJECT_DIR$/records/urls.py" />
+        <option value="$PROJECT_DIR$/items/templates/items/item_detailed_list.html" />
+        <option value="$PROJECT_DIR$/items/templates/items/item_list.html" />
+        <option value="$PROJECT_DIR$/occupations/templates/occupations/add_new.html" />
+        <option value="$PROJECT_DIR$/occupations/templates/occupations/employ.html" />
+        <option value="$PROJECT_DIR$/occupations/templates/occupations/list_all.html" />
+        <option value="$PROJECT_DIR$/records/templates/records/add_new.html" />
+        <option value="$PROJECT_DIR$/records/templates/records/user_records.html" />
+        <option value="$PROJECT_DIR$/rental_service/static/less/main.less" />
+        <option value="$PROJECT_DIR$/rental_service/templates/base.html" />
+        <option value="$PROJECT_DIR$/rental_service/templates/index.html" />
         <option value="$PROJECT_DIR$/users/templates/users/profile.html" />
+        <option value="$PROJECT_DIR$/users/templates/users/registration.html" />
+        <option value="$PROJECT_DIR$/users/templates/registration/login.html" />
+        <option value="$PROJECT_DIR$/users/urls.py" />
         <option value="$PROJECT_DIR$/users/views.py" />
+        <option value="$PROJECT_DIR$/users/forms.py" />
       </list>
     </option>
   </component>
@@ -291,6 +303,10 @@
               <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="registration" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -406,7 +422,43 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="items" />
+              <option name="myItemId" value="occupations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rental_service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rental_service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="occupations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="occupations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rental_service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rental_service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -418,14 +470,14 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="editor" />
-    <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/borrow-lend/borrow_lend" />
+    <property name="recentsLimit" value="5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -526,7 +578,27 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="rental_service" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
@@ -552,27 +624,7 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="rental_service" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8000" />
-      <option name="host" value="" />
-      <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="" />
-      <option name="runTestServer" value="false" />
-      <option name="runNoReload" value="false" />
-      <option name="useCustomRunCommand" value="false" />
-      <option name="customRunCommand" value="" />
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -708,11 +760,11 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23585658" sideWeight="0.9632" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1816733" sideWeight="0.8896" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18486056" sideWeight="0.98564595" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23266932" sideWeight="0.2795699" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16436252" sideWeight="0.5003984" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1104" sideWeight="0.4996016" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0" sideWeight="0.4996016" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -737,127 +789,119 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/rental_service/urls.py">
+    <entry file="file://$PROJECT_DIR$/records/templates/records/add_new.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="644" selection-end="644" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="486">
+        <state line="11" column="0" selection-start="258" selection-end="258" vertical-scroll-proportion="-7.3333335" vertical-offset="0" max-vertical-offset="576">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/items/tests.py">
+    <entry file="file://$PROJECT_DIR$/records/templates/records/user_records.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="62" selection-start="178" selection-end="178" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
+        <state line="11" column="0" selection-start="258" selection-end="258" vertical-scroll-proportion="-7.3333335" vertical-offset="0" max-vertical-offset="450">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/items/urls.py">
+    <entry file="file://$PROJECT_DIR$/rental_service/static/less/main.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="154" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
+        <state line="0" column="55" selection-start="55" selection-end="55" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="486">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/items/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="70" selection-start="384" selection-end="384" vertical-scroll-proportion="0.2513089" vertical-offset="0" max-vertical-offset="573">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/items/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="43" selection-start="131" selection-end="131" vertical-scroll-proportion="0.15706806" vertical-offset="0" max-vertical-offset="573">
-          <folding>
-            <element signature="e#0#24#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/occupations/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="29" selection-start="1066" selection-end="1066" vertical-scroll-proportion="0.0" vertical-offset="655" max-vertical-offset="1350">
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/positions/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="51" selection-start="1418" selection-end="1418" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="1026">
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/items/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="90" selection-start="491" selection-end="577" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="1746">
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rental_service/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="61" selection-start="1680" selection-end="1681" vertical-scroll-proportion="-3.1111112" vertical-offset="498" max-vertical-offset="1494">
+        <state line="11" column="0" selection-start="258" selection-end="258" vertical-scroll-proportion="-7.3333335" vertical-offset="0" max-vertical-offset="1692">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/records/views.py">
+    <entry file="file://$PROJECT_DIR$/rental_service/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="25" selection-start="1134" selection-end="1134" vertical-scroll-proportion="0.0" vertical-offset="157" max-vertical-offset="684">
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/records/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="71" selection-start="415" selection-end="415" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="324">
+        <state line="11" column="0" selection-start="258" selection-end="258" vertical-scroll-proportion="-7.3333335" vertical-offset="0" max-vertical-offset="576">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/positions/templates/positions/free.html">
+    <entry file="file://$PROJECT_DIR$/rental_service/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="103" selection-start="1087" selection-end="1174" vertical-scroll-proportion="-12.0" vertical-offset="324" max-vertical-offset="1008">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/users/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="36" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/users/templates/users/registration.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="503">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="684">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/users/templates/users/profile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="39" selection-start="332" selection-end="332" vertical-scroll-proportion="-6.0" vertical-offset="108" max-vertical-offset="1026">
+        <state line="11" column="0" selection-start="258" selection-end="258" vertical-scroll-proportion="-7.3333335" vertical-offset="0" max-vertical-offset="1224">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/templates/users/registration.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="258" selection-end="258" vertical-scroll-proportion="-7.3333335" vertical-offset="0" max-vertical-offset="576">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="0" selection-start="495" selection-end="495" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="486">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/users/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="12" selection-start="1048" selection-end="1048" vertical-scroll-proportion="1.1093439" vertical-offset="0" max-vertical-offset="990">
+        <state line="18" column="0" selection-start="596" selection-end="596" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1152">
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rental_service/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="666">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rental_service/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3294">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/templates/registration/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="258" selection-end="258" vertical-scroll-proportion="-7.3333335" vertical-offset="0" max-vertical-offset="558">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/records/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="574">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/records/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="574">
+          <folding />
         </state>
       </provider>
     </entry>

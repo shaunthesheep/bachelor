@@ -2,7 +2,15 @@ from annoying.decorators import render_to
 from .models import Record
 from .forms import AddRecordForm
 from common import common
-from django.contrib.admin.views.decorators import staff_member_required
+
+__author__ = 'Anna Bomersbach'
+__credits__ = ['Anna Bomersbach', 'Tomasz Kubik']
+
+__license__ = "GPL"
+__version__ = "1.0.1"
+__maintainer__ = 'Anna Bomersbach'
+__email__ = "184779@student.pwr.wroc.pl"
+__status__ = 'Production'
 
 
 @render_to('records/user_records.html')

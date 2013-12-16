@@ -4,6 +4,15 @@ from django.db import models
 from datetime import date
 from common import common
 
+__author__ = 'Anna Bomersbach'
+__credits__ = ['Anna Bomersbach', 'Tomasz Kubik']
+
+__license__ = "GPL"
+__version__ = "1.0.1"
+__maintainer__ = 'Anna Bomersbach'
+__email__ = "184779@student.pwr.wroc.pl"
+__status__ = 'Production'
+
 
 class Occupation(models.Model):
     """Model of relation storing temporal data about users occupying positions in the company.

@@ -8,6 +8,15 @@ from items.models import Item
 from occupations.models import Occupation
 from common import common
 
+__author__ = 'Anna Bomersbach'
+__credits__ = ['Anna Bomersbach', 'Tomasz Kubik']
+
+__license__ = "GPL"
+__version__ = "1.0.1"
+__maintainer__ = 'Anna Bomersbach'
+__email__ = "184779@student.pwr.wroc.pl"
+__status__ = 'Production'
+
 
 class UserRegister(CreateView):
     """Creates an instance of a registration form, sets omitted value and saves and object if valid."""

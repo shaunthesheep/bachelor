@@ -18,6 +18,15 @@ Function: update_record(user, item, period) is to construct a proper SQL query f
 from datetime import datetime, timedelta
 from django.db import connection
 
+__author__ = 'Anna Bomersbach'
+__credits__ = ['Anna Bomersbach', 'Tomasz Kubik']
+
+__license__ = "GPL"
+__version__ = "1.0.1"
+__maintainer__ = 'Anna Bomersbach'
+__email__ = "184779@student.pwr.wroc.pl"
+__status__ = 'Production'
+
 logical_now = '0001-01-01'
 future_now = datetime.strptime('3001-01-01', "%Y-%m-%d")
 

@@ -1,7 +1,6 @@
 from annoying.decorators import render_to
 from datetime import date
 from django.contrib.admin.views.decorators import staff_member_required
-from django.contrib.auth.models import User
 from django.shortcuts import get_object_or_404
 from django.views.decorators.http import require_POST
 from common import common
@@ -9,6 +8,15 @@ from .models import Occupation
 from .forms import AddOccupationForm, EmployForm
 from django.http import HttpResponse
 from positions.models import Position
+
+__author__ = 'Anna Bomersbach'
+__credits__ = ['Anna Bomersbach', 'Tomasz Kubik']
+
+__license__ = "GPL"
+__version__ = "1.0.1"
+__maintainer__ = 'Anna Bomersbach'
+__email__ = "184779@student.pwr.wroc.pl"
+__status__ = 'Production'
 
 
 @render_to('occupations/add_new.html')

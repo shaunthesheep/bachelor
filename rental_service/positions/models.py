@@ -3,6 +3,15 @@ from django.db import models
 from common import common
 from .managers import PositionManager, FreeManager
 
+__author__ = 'Anna Bomersbach'
+__credits__ = ['Anna Bomersbach', 'Tomasz Kubik']
+
+__license__ = "GPL"
+__version__ = "1.0.1"
+__maintainer__ = 'Anna Bomersbach'
+__email__ = "184779@student.pwr.wroc.pl"
+__status__ = 'Production'
+
 
 class Position(models.Model):
     """Model of relation storing data on jobs in the company."""
